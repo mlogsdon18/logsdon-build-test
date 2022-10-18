@@ -1,0 +1,13 @@
+{
+  "name": "build_pipeline_test",
+  "version": "1.0.0",
+  "description": "Build Pipeline Playground",
+  "author": "Megan Logsdon",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

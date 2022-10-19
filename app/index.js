@@ -11,7 +11,6 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'app')));
 
 app.get('/', (req, res) => {
-  console.log(path.join(__dirname, 'html/index.html'));
   res.sendFile(path.join(__dirname, 'html/index.html'));
 });
 

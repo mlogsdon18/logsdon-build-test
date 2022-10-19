@@ -5,9 +5,13 @@
   "author": "Megan Logsdon",
   "main": "index.js",
   "scripts": {
-    "start": "node app/index.js"
+    "start": "node app/index.js",
+    "lint": "eslint"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0"
   }
 }

@@ -5,9 +5,11 @@
   "author": "Megan Logsdon",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/index.ts",
     "lint:js": "eslint . --ext .js,.ts",
-    "style": "stylelint 'app/scss/*.scss'"
+    "style": "stylelint 'app/scss/*.scss'",
+    "build": "NODE_ENV=production webpack --progress",
+    "serve": "NODE_ENV=production node dist/main.js"
   },
   "dependencies": {
     "express": "^4.17.1",

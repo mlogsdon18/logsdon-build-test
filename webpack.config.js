@@ -1,13 +1,14 @@
 const path = require('path');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   target: 'node',
-  entry: './src/index.ts',
-  plugins: [
-		new NodePolyfillPlugin(),
-	],
+  entry: {
+    main: './src/index.ts',
+    'style': './src/scss/index.scss',
+  },
   module: {
     rules: [
       {
@@ -15,8 +16,32 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.scss?$/,
+        use: [
+          {
+            loader: MiniCSSExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
     ],
   },
+  plugins: [
+    new MiniCSSExtractPlugin(),
+    new NodePolyfillPlugin(),
+  ],
   resolve: {
     extensions: ['.ts', '.js'],
   },

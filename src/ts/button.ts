@@ -1,19 +1,13 @@
-let clicks = 0;
+export function buttonListener() {
+  let count = 0;
 
-const handleClick = () => {
-  clicks += 1;
-  const paragraph = document.getElementById('display');
-  if (paragraph) paragraph.innerHTML = clicks.toString();
-}
-
-export default function handleButton() {
   if (typeof window !== 'undefined') {
-    const button = document.getElementById('testButton');
-    button?.addEventListener('click', (event) => {
-      event.preventDefault();
-      handleClick();
-  
-    })
+    const button = document.querySelector('#testButton');
+    button?.addEventListener('click', () => {
+      count += 1;
+      const counter = document.querySelector('#counter');
+      if (counter) counter.innerHTML = String(count);
+    });
   }
-
+  
 }

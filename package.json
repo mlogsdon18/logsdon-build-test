@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node src/index.ts",
     "lint:js": "eslint . --ext .js,.ts",
-    "style": "stylelint 'app/scss/*.scss'",
+    "lint:css": "stylelint 'src/scss/*.scss'",
     "build": "NODE_ENV=production webpack --progress",
     "serve": "NODE_ENV=production node dist/main.js"
   },

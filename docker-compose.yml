@@ -7,5 +7,5 @@ services:
       - 8000:8000
     volumes:
       - .:/var/www/html
-    command: npm run serve
+    command: npm run dev
 

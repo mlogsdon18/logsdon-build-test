@@ -1,5 +1,5 @@
 import express from 'express';
-import path from 'path';
+import { pageContent } from './ts/index';
 
 // Constants
 const PORT = 8000;
@@ -7,10 +7,10 @@ const HOST = 'localhost';
 
 // App
 const app = express();
-app.use(express.static(path.join(__dirname, 'app')));
+app.use('/', express.static('dist'));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.write(pageContent);
 });
 
 app.listen(PORT, () => {

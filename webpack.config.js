@@ -1,9 +1,10 @@
+require('dotenv').config();
 const path = require('path');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   target: 'node',
   entry: {
     main: './src/index.ts',

@@ -17,9 +17,7 @@ export const pageContent = `
     </button>
   </div>
 
-  <p>
-    Clicks: <span id="counter">0</span>
-  </p>
+
   </body>
   <script src="main.js" type="module"></script>
   </html>

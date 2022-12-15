@@ -1,6 +1,7 @@
-export function buttonListener() {
+const buttonListener = () => {
   let count = 0;
 
+  console.log('running');
   if (typeof window !== 'undefined') {
     const button = document.querySelector('#testButton');
     button?.addEventListener('click', () => {
@@ -9,5 +10,6 @@ export function buttonListener() {
       if (counter) counter.innerHTML = String(count);
     });
   }
-  
 }
+
+export default buttonListener;

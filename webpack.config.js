@@ -7,7 +7,8 @@ module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   target: 'node',
   entry: {
-    main: './src/index.ts',
+    server: './src/index.ts',
+    main: './src/ts/index.ts',
     'style': './src/scss/index.scss',
   },
   module: {

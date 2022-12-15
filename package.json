@@ -11,8 +11,8 @@
     "lint:css": "stylelint 'src/scss/*.scss'",
     "build": "NODE_ENV=production webpack --progress",
     "build:watch": "NODE_ENV=development webpack --progress -w",
-    "serve": "NODE_ENV=production node dist/main.js",
-    "serve:watch": "NODE_ENV=development node dist/main.js"
+    "serve": "NODE_ENV=production node dist/server.js",
+    "serve:watch": "NODE_ENV=development node dist/server.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

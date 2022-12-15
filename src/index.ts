@@ -1,5 +1,5 @@
 import express from 'express';
-import { pageContent } from './ts/index';
+import { pageContent } from './pages/index';
 
 // Constants
 const PORT = 8000;

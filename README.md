@@ -9,3 +9,11 @@ We're using Express.js to get us something to look at when Docker runs the proje
 `docker-compose.yml` file exists and runs the image with persistent volume
 
 - At least two Typescript files that are combined into one file that will be served via the browser
+
+## Step 2: Linter
+
+- Stylelint 
+- ESLint for Typescript
+
+## Step 3: Testing
+

@@ -17,6 +17,25 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+  build:
+    environment:
+      CC_TEST_REPORTER_ID: 7efe23033522c137a835f84c270049e6d9271b80d90ddc12fabb46ba7839a1a2
+    docker:
+      - image: cimg/base:stable
+    working_directory: ~/src
+    steps:
+      - checkout
+      - run: 
+          name: Setup dependencies
+          command: |
+            npm install
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            # download test reporter as a static binary
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows

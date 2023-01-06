@@ -2,7 +2,7 @@ import express from 'express';
 import { pageContent } from './pages/index';
 
 // Constants
-const PORT = 8000;
+const PORT = 8080;
 const HOST = 'localhost';
 
 // App
